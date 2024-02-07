@@ -317,7 +317,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q74V9BLXQ4;
 				INFOPLIST_FILE = SplitMe/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = SplitMe;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tip Split";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -337,7 +338,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q74V9BLXQ4;
 				INFOPLIST_FILE = SplitMe/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = SplitMe;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tip Split";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

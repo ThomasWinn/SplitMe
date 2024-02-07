@@ -1,9 +1,9 @@
 //
-//  ViewController.swift
-//  Tipsy
+//  CalculateViewController.swift
+//  SplitMe
 //
-//  Created by Angela Yu on 09/09/2019.
-//  Copyright © 2019 The App Brewery. All rights reserved.
+//  Created by Thomas Nguyen on 02/07/2024.
+//  Copyright © 2024 ThomasWinn. All rights reserved.
 //
 
 import UIKit

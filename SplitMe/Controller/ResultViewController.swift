@@ -2,8 +2,8 @@
 //  ResultViewController.swift
 //  SplitMe
 //
-//  Created by Thomas Nguyen on 2/6/24.
-//  Copyright © 2024 The App Brewery. All rights reserved.
+//  Created by Thomas Nguyen on 02/07/2024.
+//  Copyright © 2024 ThomasWinn. All rights reserved.
 //
 
 import UIKit

@@ -3,4 +3,54 @@
    uuid = "8DE4F040-A774-4481-9708-4F181181B001"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0224BF38-F312-4790-A67F-C5621A664433"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SplitMe/Controller/CalculateViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "CalculateViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "0224BF38-F312-4790-A67F-C5621A664433 - 4c8ed72df17101b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SplitMe.CalculateViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; SplitMe.CalculateViewController"
+                  moduleName = "SplitMe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thomasnguyen/Desktop/CSCI%20Projects/SplitMe/SplitMe/Controller/CalculateViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "402">
+               </Location>
+               <Location
+                  uuid = "0224BF38-F312-4790-A67F-C5621A664433 - 86222ed1358667b6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SplitMe.CalculateViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;SplitMe.CalculateViewController&gt;"
+                  moduleName = "SplitMe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thomasnguyen/Desktop/CSCI%20Projects/SplitMe/SplitMe/Controller/CalculateViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "359">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CalculateViewController: UIViewController {
 
     // Tip Buttons
     @IBOutlet weak var zeroButton: UIButton!
@@ -22,11 +22,14 @@ class ViewController: UIViewController {
     // Split Amounts
     @IBOutlet weak var splitAmount: UILabel!
     
+    @IBOutlet weak var stepper: UIStepper!
     var tip: Float = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        stepper.stepValue = 1.0
+        splitAmount.text = Int(stepper.value).description
     }
     
     @IBAction func tipAmountPressed(_ sender: UIButton) {
@@ -49,10 +52,21 @@ class ViewController: UIViewController {
         }
     }
     
+    
     @IBAction func stepperPressed(_ sender: UIStepper) {
+        print(sender.value)
+        splitAmount.text = Int(sender.value).description
     }
     @IBAction func calculatePressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "mySegue", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "mySegue" {
+            let destinationVC = segue.destination as! ResultViewController
+            
+            // TODO: prepare variables to go to next view
+        }
+    }
 }
 

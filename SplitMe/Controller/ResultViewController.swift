@@ -9,13 +9,17 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-
+    
     @IBOutlet weak var summaryLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
+    
+    var dollarAmount: String?
+    var summary: String?
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        totalLabel.text = dollarAmount
+        summaryLabel.text = summary
     }
     
     @IBAction func recalculateButton(_ sender: UIButton) {

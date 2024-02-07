@@ -15,6 +15,7 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var tenButton: UIButton!
     @IBOutlet weak var fifteenButton: UIButton!
     @IBOutlet weak var twentyButton: UIButton!
+    var tipPercent: String = "-1%"
     
     // Total bill amount
     @IBOutlet weak var billTotal: UITextField!
@@ -23,19 +24,22 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var splitAmount: UILabel!
     
     @IBOutlet weak var stepper: UIStepper!
-    var tip: Float = 0.0
+    var tip: Double = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         stepper.stepValue = 1.0
         splitAmount.text = Int(stepper.value).description
+        billTotal.placeholder = "0.00"
     }
     
     @IBAction func tipAmountPressed(_ sender: UIButton) {
         sender.isSelected = true
+        tipPercent = sender.currentTitle!
+        print(tipPercent)
         let tipWithoutPercent = sender.currentTitle?.replacingOccurrences(of: "%", with: "")
-        let decimalTip: Float = Float((Double(tipWithoutPercent ?? "0") ?? 0.0) / 100.00)
+        let decimalTip: Double = (Double(tipWithoutPercent ?? "0") ?? 0.0) / 100.00
         tip = decimalTip
         
         if sender != zeroButton {
@@ -54,7 +58,6 @@ class CalculateViewController: UIViewController {
     
     
     @IBAction func stepperPressed(_ sender: UIStepper) {
-        print(sender.value)
         splitAmount.text = Int(sender.value).description
     }
     @IBAction func calculatePressed(_ sender: UIButton) {
@@ -65,7 +68,14 @@ class CalculateViewController: UIViewController {
         if segue.identifier == "mySegue" {
             let destinationVC = segue.destination as! ResultViewController
             
-            // TODO: prepare variables to go to next view
+            // Tip Calculation
+            let doubleBillTotal: Double = Double(billTotal.text!)!
+            let eachTotal: Double = (doubleBillTotal + (doubleBillTotal * tip)) / stepper.value
+            destinationVC.dollarAmount = "$" + String(format: "%.2f", eachTotal)
+            
+            print("$" + String(format: "%.2f", eachTotal))
+            // Summary Label
+            destinationVC.summary = "Split between \(String(format: "%.0f", stepper.value)) people, with \(tipPercent) tip."
         }
     }
 }
